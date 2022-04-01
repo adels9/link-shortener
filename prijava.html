@@ -1,0 +1,57 @@
+<?php
+
+include "funkcije/ucitavanje.php";
+
+if (isset($_SESSION['email'])) {
+    redirect("index.php");
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width:device-width, initial-scale=1.0">
+        <title>Prijava</title>
+        <link rel = "stylesheet" href = "css/stil.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="js/jquery.min.js"></script>
+        <script src="js/prijava.js"></script>
+    </head>
+    <body>
+        <div class="content">
+            <div class="content-inside">
+                <div class = "cover">
+                    <div class="blur"></div>  
+                    <img class = "logo" src="css/img/logo.png">
+                </div>
+                <div class = "navbar"> 
+                    <div class="container flex">
+                        <nav>
+                            <ul>
+                                <li><a href = "index.php">Početna</a></li>
+                                <li><a href = "prijava.html">Prijava</a></li>
+                                <li><a href = "registracija.html">Registracija</a></li>
+                            </ul>
+                        </nav>
+                        
+                    </div>
+                </div>  
+                <section class="main">
+                    <div class="container flex">
+                        <div class="main-window login">
+                            <input type="text" name="email" id ="email" placeholder="E-mail" required>
+                            <input type="password" name="password" id = "password" placeholder="Lozinka" required>
+                            <button class="btn log">Prijava </button>
+                            <div class = "alert"></div>
+                        </div>
+                    </div>
+                </section> 
+            </div>
+        </div>
+        <footer class="footer">
+            <p>Link Shortener 2022</p>
+        </footer>
+    </body>
+</html>
